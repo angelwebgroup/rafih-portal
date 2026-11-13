@@ -1279,10 +1279,67 @@ $options = array(
                 <?php
             }
 
+            $is_voi_ticket = (intval($ticket['category']) == 11 || (isset($hesk_settings['categories'][$ticket['category']]['name']) && (stripos($hesk_settings['categories'][$ticket['category']]['name'], 'Vehicle Order') !== false || stripos($hesk_settings['categories'][$ticket['category']]['name'], 'Order Intake') !== false)));
+            if ($is_voi_ticket)
+            {
+                ?>
+                <div class="no-print" style="margin-bottom: 15px; display: flex; justify-content: flex-end; gap: 10px;">
+                    <button type="button" class="btn btn--blue-border" onclick="printVehicleOrder();" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <svg class="icon icon-print" style="width: 16px; height: 16px;">
+                            <use xlink:href="../img/sprite.svg#icon-print"></use>
+                        </svg>
+                        Print Vehicle Order Intake
+                    </button>
+                </div>
+                <script>
+                function printVehicleOrder() {
+                    var content = document.getElementById('vehicle-order-intake-content');
+                    if (!content) {
+                        window.print();
+                        return;
+                    }
+                    var printIframe = document.getElementById('printVehicleOrderFrame');
+                    if (!printIframe) {
+                        printIframe = document.createElement('iframe');
+                        printIframe.id = 'printVehicleOrderFrame';
+                        printIframe.style.position = 'fixed';
+                        printIframe.style.right = '0';
+                        printIframe.style.bottom = '0';
+                        printIframe.style.width = '0';
+                        printIframe.style.height = '0';
+                        printIframe.style.border = '0';
+                        document.body.appendChild(printIframe);
+                    }
+                    var pri = printIframe.contentWindow;
+                    pri.document.open();
+                    pri.document.write('<!DOCTYPE html><html><head><title>Vehicle Order Intake - <?php echo htmlspecialchars($ticket['trackid']); ?></title>');
+                    pri.document.write('<style>');
+                    pri.document.write('@page { size: landscape; margin: 8mm; }');
+                    pri.document.write('* { box-sizing: border-box; }');
+                    pri.document.write('body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; color: #1e293b; background: #fff; font-size: 10px; }');
+                    pri.document.write('table { width: 100% !important; border-collapse: collapse; }');
+                    pri.document.write('th, td { box-sizing: border-box; font-size: 10px; }');
+                    pri.document.write('img { max-height: 40px; }');
+                    pri.document.write('div { box-shadow: none !important; }');
+                    pri.document.write('div[style*="max-width"] { max-width: 100% !important; padding: 5px !important; margin: 0 !important; }');
+                    pri.document.write('</style>');
+                    pri.document.write('</head><body>');
+                    pri.document.write(content.innerHTML);
+                    pri.document.write('</body></html>');
+                    pri.document.close();
+                    setTimeout(function() {
+                        pri.focus();
+                        pri.print();
+                    }, 250);
+                }
+                </script>
+                <?php
+            }
+
             if ($ticket['message_html'] != '')
             {
                 ?>
-                <div class="block--description browser-default" <?php if (in_array(intval($ticket['category']), array(9, 10))) echo 'id="credit-app-content"'; ?>>
+                <div class="block--description browser-default" <?php if (in_array(intval($ticket['category']), array(9, 10))) echo 'id="credit-app-content"'; elseif ($is_voi_ticket) echo 'id="vehicle-order-intake-wrapper"'; ?>>
                     <p><?php echo $ticket['message_html']; ?></p>
                     <p></p>
                 </div>               
