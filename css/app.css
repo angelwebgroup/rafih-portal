@@ -254,7 +254,7 @@ a:hover {
 .icon-categories {
     width: 1em;
     height: 1em;
-    fill: #FFF
+    fill: #FFF;
 }
 
 .icon-chevron-down {
@@ -2246,15 +2246,15 @@ img:not([src]):not([srcset]) {
     box-shadow: 0 0 0 2px rgba(12, 120, 60, 0.15) !important;
 }
 
-.dropdown-select.searchable .dropdown-list > li[data-option] {
+.dropdown-select.searchable .dropdown-list>li[data-option] {
     cursor: pointer;
 }
 
-.dropdown-select.searchable .dropdown-list > li[data-option]:hover {
+.dropdown-select.searchable .dropdown-list>li[data-option]:hover {
     background-color: #f0f7f3;
 }
 
-.dropdown-select.searchable .dropdown-list > li[data-option].selected {
+.dropdown-select.searchable .dropdown-list>li[data-option].selected {
     font-weight: 600;
     background-color: #e6f4ea;
 }
@@ -2314,14 +2314,14 @@ img:not([src]):not([srcset]) {
 .dropdown .dropdown-list>li a:hover,
 .dropdown-select .dropdown-list>li a:hover {
     color: #fff;
-	background-color:#000;
+    background-color: #000;
 }
 
 .dropdown .dropdown-list>li a:hover,
 .dropdown-select .dropdown-list>li a:hover,
 .with-label .dropdown-list>li a:hover {
     color: #fff;
-	background-color:#000;
+    background-color: #000;
 }
 
 .dropdown .dropdown-list>li svg,
