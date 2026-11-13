@@ -396,6 +396,12 @@ if (in_array(intval($tmpvar['category']), array(9, 10))) {
 	$dealerships_arr = isset($_POST['credit_dealerships']) && is_array($_POST['credit_dealerships']) ? $_POST['credit_dealerships'] : array();
 	$tmpvar['custom1'] = implode(', ', array_map('trim', $dealerships_arr));
 }
+
+if ($tmpvar['category'] == 11 || (isset($hesk_settings['categories'][$tmpvar['category']]['name']) && (stripos($hesk_settings['categories'][$tmpvar['category']]['name'], 'Vehicle Order') !== false || stripos($hesk_settings['categories'][$tmpvar['category']]['name'], 'Order Intake') !== false))) {
+	if (!empty($_POST['voi_dealership'])) {
+		$tmpvar['custom1'] = hesk_input($_POST['voi_dealership']);
+	}
+}
 //print_r($tmpvar);exit;
 
 // If use doesn't have permission to set due dates, try using the category default due date

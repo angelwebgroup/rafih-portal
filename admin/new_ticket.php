@@ -1131,29 +1131,22 @@ function hesk_getCatDescription($id)
             <?php } ?>
 
             <?php if ($is_vehicle_order) { 
-                $voi_canada_dealerships = array(
-                    'Countryside Chrysler',
-                    'Eastway Toyota/Lexus',
-                    'Jaguar Land Rover of London',
-                    'Leamington GM',
-                    'Midtown Honda',
-                    'Jaguar Land Rover of Windsor',
-                    'Oakridge Ford',
-                    'Performance Ford',
-                    'Overseas Mercedes-Benz',
-                    'Windsor Mazda',
-                    'Whiteoak Ford',
-                    'Overseas BMW'
-                );
-                $voi_usa_dealerships = array(
-                    'Audi of Rochester Hills',
-                    'BMW of Rochester Hills',
-                    'Mercedes-Benz of North Olmsted',
-                    'Motor City Mini',
-                    'Porsche Detroit North',
-                    'Porsche of North Olmsted',
-                    'Toyota of Warren'
-                );
+                $voi_dealerships = array();
+                if (!empty($_SESSION['isadmin'])) {
+                    $res_vd = hesk_dbQuery("SELECT `dealership` FROM `" . hesk_dbEscape($hesk_settings['db_pfix']) . "dealerships` ORDER BY `dealership` ASC");
+                    while ($row_vd = hesk_dbFetchAssoc($res_vd)) {
+                        $voi_dealerships[] = $row_vd['dealership'];
+                    }
+                } else {
+                    if (!empty($_SESSION['dealerships'])) {
+                        $voi_dealerships = explode(',', $_SESSION['dealerships']);
+                        $voi_dealerships = array_map('trim', $voi_dealerships);
+                    } elseif (!empty($_SESSION['dealership'])) {
+                        $voi_dealerships[] = trim($_SESSION['dealership']);
+                    }
+                }
+                $voi_dealerships = array_values(array_filter(array_unique($voi_dealerships)));
+                $voi_user_default_dealership = isset($_SESSION['dealership']) ? trim($_SESSION['dealership']) : '';
             ?>
             <style>
             .voi-panel {
@@ -1484,16 +1477,20 @@ function hesk_getCatDescription($id)
                         <label for="voi_dealership">Dealership <span class="req">*</span></label>
                         <select name="voi_dealership" id="voi_dealership" required>
                             <option value="">-- Select Dealership --</option>
-                            <optgroup label="Canada Dealerships">
-                                <?php foreach ($voi_canada_dealerships as $ds): ?>
-                                    <option value="<?php echo htmlspecialchars($ds); ?>"><?php echo htmlspecialchars($ds); ?></option>
-                                <?php endforeach; ?>
-                            </optgroup>
-                            <optgroup label="USA Dealerships">
-                                <?php foreach ($voi_usa_dealerships as $ds): ?>
-                                    <option value="<?php echo htmlspecialchars($ds); ?>"><?php echo htmlspecialchars($ds); ?></option>
-                                <?php endforeach; ?>
-                            </optgroup>
+                            <?php foreach ($voi_dealerships as $ds): 
+                                $display_name = str_replace('_', ' ', $ds);
+                                $is_selected = (
+                                    (!empty($voi_user_default_dealership) && (
+                                        $ds === $voi_user_default_dealership ||
+                                        $display_name === $voi_user_default_dealership ||
+                                        str_replace(' ', '_', $display_name) === str_replace(' ', '_', $voi_user_default_dealership)
+                                    )) ||
+                                    count($voi_dealerships) === 1
+                                );
+                                $selected_attr = $is_selected ? 'selected="selected"' : '';
+                            ?>
+                                <option value="<?php echo htmlspecialchars($display_name); ?>" <?php echo $selected_attr; ?>><?php echo htmlspecialchars($display_name); ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
 
