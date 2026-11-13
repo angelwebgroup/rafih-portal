@@ -2566,11 +2566,13 @@ button {
     min-width: 152px;
     height: 40px;
     /* background-color: #0c783c; */
+    /* border: 1px solid #0c783c; */
     background-color: maroon;
+    border: 1px solid #9615c9;
     color: #fff;
     font-weight: 600;
     transition: all 100ms ease;
-    border: 1px solid #0c783c;
+
 }
 
 .btn-full.inline-flex {
