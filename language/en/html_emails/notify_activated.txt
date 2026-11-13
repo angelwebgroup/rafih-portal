@@ -1,0 +1,9 @@
+<div class="MsoNormal" style="color:#183247;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:16px;background-color:#ffffff;"><span style="font-family:'Times New Roman', serif;color:#002060;font-weight:bold; text-decoration: underline;">** DO NOT REPLY TO THIS EMAIL *** </span><br/><br/></div>
+<div class="MsoNormal" style="color:#183247;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:14px;background-color:#ffffff;"><span style="font-family:'Times New Roman', serif;color:#002060;font-weight:bold;">RESPOND ARE TO BE ENTERED INTO THE PORTAL DIRECTLY.</span></div>
+
+<p>Hi %%NAME%%,</p>
+<p>Your account with Rafih Portal has been activated. You can login now!</p>
+<p> </p>
+
+<p>Thanks,</p>
+<p>Rafih Portal<br /><a href="%%SITE_URL%%/helpdesk/admin/">%%SITE_URL%%</a></p>

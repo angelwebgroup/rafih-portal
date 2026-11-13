@@ -1,0 +1,14 @@
+Dear %%NAME%%,
+
+Your support request "%%SUBJECT%%" has been updated to a status %%STATUS%% with message  : 
+
+%%MESSAGE%%
+
+For request details please visit the portal.
+
+Request Track ID : %%TRACK_ID%%
+
+Sincerely,
+
+%%SITE_TITLE%%
+%%SITE_URL%%

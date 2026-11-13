@@ -1,0 +1,74 @@
+php_value upload_max_filesize 1024M
+php_value post_max_size 1024M
+
+# Security: Disable directory browsing
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^$ /admin/ [R=301,L]
+</IfModule>
+
+# Security: Protect sensitive files (.sql backups, logs, configs) from direct web access
+<FilesMatch "\.(bak|config|sql|ini|log|sh)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from All
+    </IfModule>
+</FilesMatch>
+
+# 1. Enable GZIP Compression (Compresses 975KB HTML down to ~60KB for instant loading)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/opentype
+</IfModule>
+
+# 2. Enable Browser Caching (Static CSS/JS/images load instantly in 0s from cache)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # CSS & JavaScript (cached for 1 month)
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+
+    # Images, Icons & SVG (cached for 1 year)
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+
+    # Dynamic PHP/HTML (do not cache dynamic ticket lists)
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# 3. HTTP Headers for Proxy & Keep-Alive
+<IfModule mod_headers.c>
+    Header append Vary Accept-Encoding
+</IfModule>
+

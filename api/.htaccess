@@ -1,0 +1,43 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Pass Authorization header to PHP environment
+  RewriteCond %{HTTP:Authorization} .
+  RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # Allow direct PHP endpoints under api/* folders
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ - [L]
+
+  # Handle preflight OPTIONS requests immediately
+  RewriteCond %{REQUEST_METHOD} OPTIONS
+  RewriteRule ^(.*)$ - [R=204,L]
+</IfModule>
+
+# Prevent direct access to files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+# Rewrite all other URLs to index.php/URL (if you use a front controller)
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+# CORS Headers - Set for all requests
+<IfModule mod_headers.c>
+  Header always set Access-Control-Allow-Origin "*"
+  Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+  Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With, Origin, Accept, X-CSRF-Token"
+  Header always set Access-Control-Max-Age "3600"
+  Header always set Access-Control-Allow-Credentials "false"
+  Header always append Vary "Origin"
+
+  # Security headers
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+
+
+

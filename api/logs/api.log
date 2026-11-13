@@ -1,0 +1,913 @@
+[2025-10-03 18:15:43] [ERROR] Database error during login {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active' in 'field list'"}
+[2025-10-03 18:15:49] [ERROR] Database error during login {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active' in 'field list'"}
+[2025-10-03 18:16:36] [ERROR] Database error during login {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active' in 'field list'"}
+[2025-10-03 18:17:19] [ERROR] Database error during login {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active' in 'field list'"}
+[2025-10-03 18:19:33] [WARNING] Login attempt with non-existent email {"email":"admin@rafih.com"}
+[2025-10-03 18:19:40] [WARNING] Login attempt with non-existent email {"email":"admin@rafih.com"}
+[2025-10-03 18:29:22] [INFO] New user registered {"user_id":"483","email":"amitsharma0007in@gmail.com"}
+[2025-10-03 18:42:27] [WARNING] Login attempt with inactive account {"email":"amitsharma0007in@gmail.com"}
+[2025-10-03 18:44:40] [WARNING] Login attempt with inactive account {"email":"amitsharma0007in@gmail.com"}
+[2025-10-03 19:17:06] [WARNING] Login attempt with inactive account {"username":"admin"}
+[2025-10-03 19:17:12] [WARNING] Login attempt with inactive account {"username":"admin"}
+[2025-10-03 19:17:28] [WARNING] Login attempt with inactive account {"username":"admin"}
+[2025-10-03 19:20:30] [ERROR] Database error during login {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lastlogin' in 'field list'"}
+[2025-10-03 19:21:33] [ERROR] Database error during login {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lastlogin' in 'field list'"}
+[2025-10-03 19:23:22] [ERROR] Database error during login {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lastlogin' in 'field list'"}
+[2025-10-03 19:24:19] [ERROR] Database error during login {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lastlogin' in 'field list'"}
+[2025-10-03 19:25:55] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 19:27:14] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 19:44:11] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:05:52] [WARNING] Login attempt with invalid password {"username":"admin"}
+[2025-10-03 21:08:38] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:11:27] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:12:18] [WARNING] Login attempt with non-existent username {"username":"admin@blackrockdigital.agency"}
+[2025-10-03 21:12:25] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:14:41] [WARNING] Login attempt with invalid password {"username":"dpellizzari"}
+[2025-10-03 21:14:45] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:17:36] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:17:55] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:17:55] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:23:31] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:26:16] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:26:33] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:27:33] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:27:39] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:29:33] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:29:35] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:44:22] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 21:45:43] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:45:43] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:46:47] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:46:47] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:47:39] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:47:39] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:53:00] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:53:00] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:53:02] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:53:02] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:53:31] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:53:31] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 21:53:32] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:53:32] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 21:53:34] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-03 21:53:37] [INFO] Tickets list accessed {"user_id":1,"page":3,"limit":10,"total_count":1425}
+[2025-10-03 21:53:39] [INFO] Tickets list accessed {"user_id":1,"page":4,"limit":10,"total_count":1425}
+[2025-10-03 21:53:41] [INFO] Tickets list accessed {"user_id":1,"page":5,"limit":10,"total_count":1425}
+[2025-10-03 21:53:44] [INFO] Tickets list accessed {"user_id":1,"page":6,"limit":10,"total_count":1425}
+[2025-10-03 21:54:09] [INFO] Tickets list accessed {"user_id":1,"page":7,"limit":10,"total_count":1425}
+[2025-10-03 21:54:23] [INFO] Tickets list accessed {"user_id":1,"page":8,"limit":10,"total_count":1425}
+[2025-10-03 21:54:28] [INFO] Tickets list accessed {"user_id":1,"page":9,"limit":10,"total_count":1425}
+[2025-10-03 21:56:06] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:56:06] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:56:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 21:56:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 21:57:15] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:57:15] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 21:57:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 21:57:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:02:23] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:02:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:02:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:02:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:02:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:02:51] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":28}
+[2025-10-03 22:02:52] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":10}
+[2025-10-03 22:02:54] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1157}
+[2025-10-03 22:02:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:03:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":28}
+[2025-10-03 22:03:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":10}
+[2025-10-03 22:03:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1157}
+[2025-10-03 22:03:10] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1157}
+[2025-10-03 22:03:13] [INFO] Tickets list accessed {"user_id":1,"page":3,"limit":10,"total_count":1157}
+[2025-10-03 22:03:17] [INFO] Tickets list accessed {"user_id":1,"page":4,"limit":10,"total_count":1157}
+[2025-10-03 22:03:22] [INFO] Tickets list accessed {"user_id":1,"page":5,"limit":10,"total_count":1157}
+[2025-10-03 22:03:31] [INFO] Tickets list accessed {"user_id":1,"page":6,"limit":10,"total_count":1157}
+[2025-10-03 22:03:35] [INFO] Tickets list accessed {"user_id":1,"page":7,"limit":10,"total_count":1157}
+[2025-10-03 22:04:46] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:04:46] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:04:46] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:05:29] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":28}
+[2025-10-03 22:05:31] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":10}
+[2025-10-03 22:05:34] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1157}
+[2025-10-03 22:05:39] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:05:40] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":28}
+[2025-10-03 22:05:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":10}
+[2025-10-03 22:05:47] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1157}
+[2025-10-03 22:05:54] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1157}
+[2025-10-03 22:06:00] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:06:00] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:06:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:06:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:06:17] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:06:17] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:06:19] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:06:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:06:25] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:06:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:06:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:06:27] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-03 22:07:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:07:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:07:00] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:07:00] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:07:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:07:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:07:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:07:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:07:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:07:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:09:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:09:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:26] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:26] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:26] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:10:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:10:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:46] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:46] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:47] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:10:50] [INFO] Ticket details accessed {"ticket_id":1532,"user_id":1}
+[2025-10-03 22:16:47] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:16:47] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:16:48] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:16:57] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-03 22:17:09] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:17:09] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:17:09] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:17:09] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:17:27] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-03 22:17:31] [INFO] Tickets list accessed {"user_id":1,"page":3,"limit":10,"total_count":1425}
+[2025-10-03 22:17:33] [INFO] Tickets list accessed {"user_id":1,"page":4,"limit":10,"total_count":1425}
+[2025-10-03 22:17:50] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:17:50] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:17:50] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:17:50] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:17:51] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:17:51] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:17:52] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:28:02] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 22:28:03] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:28:03] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:28:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:28:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:28:05] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:28:05] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:28:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:28:26] [INFO] Ticket details accessed {"ticket_id":1532,"user_id":1}
+[2025-10-03 22:29:13] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:29:13] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:29:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:30:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:30:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:30:03] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:30:52] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:30:53] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:30:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:30:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:10] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:31:10] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:31:10] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:10] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":28}
+[2025-10-03 22:31:29] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:39] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:31:39] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:31:39] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:39] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:48] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-03 22:31:50] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:50] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:31:51] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:32:08] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:32:08] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:32:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:32:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:40:51] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:40:51] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:40:51] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:40:51] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:49:48] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:49:48] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:49:48] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:49:48] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:49:49] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:49:49] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:49:49] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:52:10] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 22:52:12] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:52:12] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:52:12] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:52:12] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:53:58] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 22:53:59] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:53:59] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 22:53:59] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 22:53:59] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 23:25:22] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 23:25:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 23:25:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 23:25:23] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 23:25:23] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 23:31:10] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 23:33:57] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 23:34:02] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 23:35:03] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-03 23:35:23] [INFO] Users list accessed {"user_id":1,"page":1,"limit":5,"total_count":1}
+[2025-10-03 23:35:25] [INFO] Users list accessed {"user_id":1,"page":1,"limit":2,"total_count":347}
+[2025-10-03 23:35:25] [INFO] Users list accessed {"user_id":1,"page":2,"limit":2,"total_count":347}
+[2025-10-03 23:35:36] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 23:35:39] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-03 23:35:40] [INFO] Users list accessed {"user_id":1,"page":1,"limit":5,"total_count":1}
+[2025-10-03 23:35:42] [INFO] Users list accessed {"user_id":1,"page":1,"limit":2,"total_count":347}
+[2025-10-03 23:35:42] [INFO] Users list accessed {"user_id":1,"page":2,"limit":2,"total_count":347}
+[2025-10-03 23:35:43] [INFO] Users list accessed {"user_id":1,"page":1,"limit":5,"total_count":1}
+[2025-10-03 23:36:25] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 23:36:27] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 23:36:27] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-03 23:36:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 23:36:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 23:36:30] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 23:36:30] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 23:36:30] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-03 23:43:49] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 23:44:01] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-03 23:44:01] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:03:07] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-04 17:03:09] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 17:03:09] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 17:03:09] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 17:03:09] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 17:03:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 17:03:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 17:03:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 17:03:57] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 17:03:57] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 17:03:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 17:03:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 17:32:25] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:32:25] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:49:38] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:49:38] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:53:04] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:53:08] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:53:08] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:57:10] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 17:57:10] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:00:02] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:00:02] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:01:50] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-04 18:02:00] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":0}
+[2025-10-04 18:02:04] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":0}
+[2025-10-04 18:02:08] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-04 18:02:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":0}
+[2025-10-04 18:02:23] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":1}
+[2025-10-04 18:02:51] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-04 18:05:40] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-04 18:05:42] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 18:05:42] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 18:05:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 18:05:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 18:05:44] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:05:44] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:11:57] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-04 18:11:59] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 18:11:59] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 18:11:59] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 18:11:59] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 18:12:01] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:12:01] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:44:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:44:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:45:52] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:45:52] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:48:12] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 18:48:12] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 18:48:12] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 18:48:13] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 18:56:21] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 18:56:21] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 19:23:11] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-04 19:23:13] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 19:23:13] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 19:23:13] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 19:23:13] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 19:23:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 19:23:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 19:23:39] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 19:23:39] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 19:55:42] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 19:55:42] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 19:55:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 19:55:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 19:55:44] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 19:55:44] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 20:03:55] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 23:34:56] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-04 23:34:58] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 23:34:58] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 23:34:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:34:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:35:05] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:35:05] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:35:05] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:35:13] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 23:35:13] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 23:35:17] [INFO] Users list accessed {"user_id":1,"page":2,"limit":20,"total_count":347}
+[2025-10-04 23:35:41] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 23:35:41] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 23:35:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:35:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:35:43] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-04 23:35:44] [INFO] Tickets list accessed {"user_id":1,"page":3,"limit":10,"total_count":1425}
+[2025-10-04 23:35:46] [INFO] Tickets list accessed {"user_id":1,"page":4,"limit":10,"total_count":1425}
+[2025-10-04 23:35:49] [INFO] Tickets list accessed {"user_id":1,"page":5,"limit":10,"total_count":1425}
+[2025-10-04 23:36:07] [INFO] Tickets list accessed {"user_id":1,"page":6,"limit":10,"total_count":1425}
+[2025-10-04 23:36:10] [INFO] Tickets list accessed {"user_id":1,"page":7,"limit":10,"total_count":1425}
+[2025-10-04 23:36:13] [INFO] Tickets list accessed {"user_id":1,"page":8,"limit":10,"total_count":1425}
+[2025-10-04 23:36:15] [INFO] Tickets list accessed {"user_id":1,"page":9,"limit":10,"total_count":1425}
+[2025-10-04 23:36:33] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 23:36:33] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 23:44:55] [INFO] Users list accessed {"user_id":1,"page":2,"limit":20,"total_count":347}
+[2025-10-04 23:45:06] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 23:45:06] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 23:45:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:45:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:45:07] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:45:07] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:45:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:45:11] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 23:45:11] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-04 23:45:19] [INFO] Users list accessed {"user_id":1,"page":2,"limit":20,"total_count":347}
+[2025-10-04 23:45:51] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:45:51] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:46:02] [INFO] Users list accessed {"user_id":1,"page":2,"limit":20,"total_count":347}
+[2025-10-04 23:58:09] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 23:58:09] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-04 23:58:09] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-04 23:58:10] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 00:03:56] [WARNING] Login attempt with invalid password {"username":"admin"}
+[2025-10-05 00:04:28] [WARNING] Login attempt with invalid password {"username":"admin"}
+[2025-10-05 10:24:47] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:25:26] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:25:35] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:26:30] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:27:56] [WARNING] Login attempt with non-existent username {"username":"test"}
+[2025-10-05 10:28:59] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:34:51] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:34:58] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:35:48] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:36:03] [WARNING] Login attempt with non-existent username {"username":"test"}
+[2025-10-05 10:39:35] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:39:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:39:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:39:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:39:44] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 10:39:44] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 10:39:44] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 10:39:48] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:39:48] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:39:48] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:39:49] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-05 10:39:49] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-05 10:39:49] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-05 10:39:49] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-05 10:41:24] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:41:27] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:41:27] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:41:27] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:42:35] [WARNING] Login attempt with invalid password {"username":"admin"}
+[2025-10-05 10:43:32] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:44:03] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:44:18] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:44:38] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:44:38] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:44:38] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:44:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:44:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:44:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:44:42] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:44:44] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:44:44] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:46:33] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:46:33] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:46:33] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:47:51] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:48:07] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:16] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:48:16] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:48:17] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:48:20] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:20] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:20] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:26] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:26] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:26] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:51] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:48:52] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:52] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:48:52] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:49:54] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:49:54] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:49:54] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:50:39] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:50:39] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:50:39] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:51:04] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:51:09] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:51:14] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:51:25] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:51:25] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:51:25] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:51:44] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:51:49] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:51:52] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:51:58] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 10:51:58] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:53:07] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:53:07] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:53:07] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:53:50] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:53:50] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:53:50] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:54:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:54:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:54:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:54:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:55:17] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:08] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:59:08] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 10:59:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:12] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:12] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:13] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 10:59:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 10:59:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 10:59:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 11:00:48] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 11:00:48] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 11:00:58] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 11:00:58] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 11:00:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 11:00:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 11:01:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 11:01:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 11:01:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 11:03:54] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 12:01:00] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"search":"","total_count":6}
+[2025-10-05 13:43:56] [WARNING] Login attempt with non-existent username {"username":"test"}
+[2025-10-05 13:44:30] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 13:44:32] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 16:21:13] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 16:21:52] [WARNING] Login attempt with invalid password {"username":"admin"}
+[2025-10-05 16:22:26] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 16:23:00] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 16:23:01] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 16:25:21] [WARNING] Login attempt with invalid password {"username":"admin"}
+[2025-10-05 16:26:26] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 16:29:12] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-05 16:29:14] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 16:29:14] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 16:29:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:29:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:29:16] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-05 16:29:16] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-05 16:29:19] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 16:29:19] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-05 16:29:19] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:29:19] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:29:21] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-05 16:29:22] [INFO] Tickets list accessed {"user_id":1,"page":3,"limit":10,"total_count":1425}
+[2025-10-05 16:29:23] [INFO] Tickets list accessed {"user_id":1,"page":4,"limit":10,"total_count":1425}
+[2025-10-05 16:29:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:29:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:29:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:29:26] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-05 16:29:28] [INFO] Tickets list accessed {"user_id":1,"page":3,"limit":10,"total_count":1425}
+[2025-10-05 16:29:32] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-05 16:29:32] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-05 16:29:38] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 16:29:38] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 16:29:43] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":1}
+[2025-10-05 16:29:47] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 16:59:36] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-05 16:59:36] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-05 16:59:44] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:59:44] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 16:59:44] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 17:22:48] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 17:22:48] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 17:22:48] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-05 17:23:29] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-05 17:23:29] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 03:05:23] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 03:05:25] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 03:05:25] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 03:05:25] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 03:05:25] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 03:05:34] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 03:05:34] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 03:05:35] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 03:07:25] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 03:07:25] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 03:07:26] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 03:18:43] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 03:19:26] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 11:04:53] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 11:06:14] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 11:06:16] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:06:16] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:06:16] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:06:16] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:06:29] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:06:29] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:06:30] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:18:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:05] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:05] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:08] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:19:08] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:19:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:09] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:19:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:12] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:27:12] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:27:12] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:12] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:17] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:18] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:28] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:30] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:27:30] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:27:30] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:30] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:46] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-06 11:27:48] [INFO] Tickets list accessed {"user_id":1,"page":3,"limit":10,"total_count":1425}
+[2025-10-06 11:27:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:59] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:27:59] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 11:27:59] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:27:59] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:28:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:28:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:28:01] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:39:52] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:39:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:41:11] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:41:11] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:47:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:47:57] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 11:47:57] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 11:47:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:48:54] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:48:54] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 11:48:54] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 11:48:54] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 11:48:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:05:28] [WARNING] Login attempt with invalid password {"username":"admin"}
+[2025-10-06 12:16:22] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:16:24] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:16:24] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:16:25] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:16:25] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:16:43] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:16:43] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:16:43] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:16:43] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:19:03] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:19:03] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:19:03] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:19:03] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:19:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:19:06] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:19:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:19:06] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:20:09] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:20:14] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:20:14] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:20:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:20:14] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:20:16] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:20:16] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:20:16] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:20:16] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:20:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:20:27] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:20:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:20:27] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:20:59] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:21:06] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:21:37] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:21:38] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:21:40] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:32:14] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:33:04] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:33:51] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:33:53] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:33:53] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:33:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:33:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:33:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:33:57] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:33:57] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:33:57] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:35:53] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:36:00] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:36:36] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 12:36:36] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:37:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:37:04] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:37:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:37:04] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:37:43] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:37:43] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:37:43] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:37:43] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:37:57] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:37:57] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:37:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:37:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:38:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:38:02] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:38:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:38:02] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:38:48] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:38:48] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:38:49] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:38:49] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:38:55] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 12:38:55] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 12:38:57] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-06 12:38:57] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-06 12:39:03] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 12:39:03] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 12:39:07] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:39:07] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:39:07] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:39:07] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:39:11] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 12:39:11] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 12:39:43] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 12:39:43] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":347}
+[2025-10-06 12:39:44] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:39:44] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:39:44] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:39:44] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:39:45] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:42:38] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":1425}
+[2025-10-06 12:42:40] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:42:40] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:42:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:42:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:42:47] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:42:47] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:42:47] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:42:47] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:42:48] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:43:44] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:43:44] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:43:44] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:43:44] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":6}
+[2025-10-06 12:43:44] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:43:47] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:43:47] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 12:43:47] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:43:47] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":1425}
+[2025-10-06 12:43:54] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-06 12:43:54] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":6}
+[2025-10-06 12:44:57] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":7}
+[2025-10-06 12:44:57] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":7}
+[2025-10-06 12:45:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 12:45:04] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 12:45:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 12:45:04] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 12:45:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 12:45:17] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 12:45:17] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:22:20] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:22:20] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:22:20] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 13:22:20] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 13:23:02] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:23:02] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:56:34] [WARNING] Login attempt with invalid password {"username":"admin"}
+[2025-10-06 13:56:46] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 13:56:53] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 13:56:53] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 13:56:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 13:56:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 13:56:58] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 13:56:58] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:56:59] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:57:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 13:57:00] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 13:57:37] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:57:37] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:57:54] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:57:55] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:58:07] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 13:58:07] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:06:26] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:06:26] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:06:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:06:27] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:06:52] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:06:52] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:06:52] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:06:52] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:06:52] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:06:55] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:06:55] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:07:20] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:07:20] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:09:41] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:09:41] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:09:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:09:41] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:09:42] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:09:42] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:09:54] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:09:54] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:22:03] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:22:03] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:22:03] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:22:03] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:22:03] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:22:03] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:22:03] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:22:03] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:22:04] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:23:15] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:23:15] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:23:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:23:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:23:21] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:23:21] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:23:21] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:23:21] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:23:21] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:23:46] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:23:46] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:23:46] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:23:46] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:24:45] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:24:45] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:24:45] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:24:45] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:24:55] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":7}
+[2025-10-06 14:24:55] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":10,"total_count":7}
+[2025-10-06 14:24:59] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:24:59] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:25:02] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:25:02] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:25:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:25:02] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:35:15] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:35:15] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:35:15] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:35:16] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:35:32] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:35:32] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:38:18] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:38:18] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:39:14] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:39:14] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:39:19] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:39:19] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:39:48] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:39:48] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:41:34] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:41:34] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:46:37] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:46:37] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:47:14] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:47:14] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":486}
+[2025-10-06 14:47:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:47:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:47:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:47:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:47:38] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:47:38] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:47:38] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:47:38] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 14:47:39] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:47:54] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:47:54] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 14:47:54] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 14:47:54] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:20:51] [ERROR] Database error during password reset {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active' in 'where clause'"}
+[2025-10-06 15:21:43] [ERROR] Database error during password reset {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active' in 'where clause'"}
+[2025-10-06 15:44:22] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-06 15:44:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 15:44:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 15:44:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:44:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:44:35] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:44:35] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 15:44:35] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:44:35] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 15:44:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:45:06] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 15:45:06] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-06 15:45:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:45:06] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:45:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:45:08] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 15:45:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:45:08] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 15:45:08] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:45:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:45:36] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 15:45:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-06 15:45:36] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-06 15:45:37] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-07 09:48:17] [WARNING] Login attempt with non-existent username {"username":"test"}
+[2025-10-07 09:49:47] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-07 09:50:07] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-07 09:51:16] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-07 09:52:25] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-07 09:56:33] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-07 10:02:11] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-07 08:43:28] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":3580}
+[2025-10-07 08:43:28] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-07 08:43:28] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":3580}
+[2025-10-07 08:43:28] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-07 08:43:28] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":3580}
+[2025-10-07 08:45:16] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":307}
+[2025-10-07 08:45:22] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":307}
+[2025-10-07 08:45:22] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":307}
+[2025-10-07 08:45:37] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":307}
+[2025-10-07 08:45:37] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":307}
+[2025-10-07 08:46:40] [INFO] Users list accessed {"user_id":1,"page":2,"limit":20,"total_count":307}
+[2025-10-07 08:46:53] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":307}
+[2025-10-07 08:46:53] [INFO] Users list accessed {"user_id":1,"page":1,"limit":20,"total_count":307}
+[2025-10-14 17:17:21] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:21] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:22] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:22] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:23] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:23] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:23] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:24] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:54] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:54] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:54] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:54] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:56] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:56] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:17:56] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:17:56] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:18:34] [INFO] Successful login {"user_id":1,"username":"admin"}
+[2025-10-14 17:18:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:18:36] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:18:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:18:36] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:18:38] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:18:38] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-14 17:18:38] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-14 17:18:38] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:18:39] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:21:08] [INFO] Tickets list accessed {"user_id":1,"page":2,"limit":10,"total_count":2310}
+[2025-10-14 17:21:11] [INFO] Tickets list accessed {"user_id":1,"page":3,"limit":10,"total_count":2310}
+[2025-10-14 17:27:52] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:27:52] [INFO] Dashboard summary accessed {"user_id":1}
+[2025-10-14 17:27:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:27:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:27:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:27:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}
+[2025-10-14 17:27:53] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-14 17:27:53] [INFO] Categories list accessed {"user_id":1,"page":1,"limit":20,"total_count":7}
+[2025-10-14 17:27:53] [INFO] Tickets list accessed {"user_id":1,"page":1,"limit":10,"total_count":2310}

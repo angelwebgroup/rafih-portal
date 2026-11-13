@@ -1,0 +1,8 @@
+Hi %%NAME%%,
+
+Your account with Rafih Portal has been activated. You can login now!
+
+Thanks,
+
+%%SITE_TITLE%%
+%%SITE_URL%%

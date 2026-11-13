@@ -1,0 +1,10 @@
+Hi,
+
+A new account is registered on Rafih Portal with username : %%USERNAME%%
+
+Please login and activate the user.
+
+Thanks,
+
+%%SITE_TITLE%%
+%%SITE_URL%%

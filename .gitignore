@@ -1,0 +1,59 @@
+# Separate applications & sub-projects
+Crm/
+Crm_old/
+BRD_LP/
+BRDEmp/
+Rafih/
+Rafih old/
+BRD-Emp.zip
+
+# Helpdesk Uploads & User Attachments
+/attachments/*
+!/attachments/index.htm
+!/attachments/.htaccess
+
+# Cache & Temporary Files
+/cache/*
+!/cache/index.htm
+!/cache/hp/
+!/cache/hp/index.htm
+
+# Logs
+*.log
+error_log
+/api/logs/*
+!/api/logs/index.htm
+
+# Backups, archives & database dumps
+*.zip
+*.tar.gz
+*.rar
+*.sql
+*.sql.gz
+*.bak
+*.old
+/admin/backups/
+
+# Operating System & IDE files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Environment & Server files
+.env
+.env.*
+.user.ini
+App_Data/
+error_docs/
+cgi-bin/
+_connectionStringUp*
+temp/
+tmp/

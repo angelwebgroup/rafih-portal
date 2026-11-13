@@ -1,0 +1,8 @@
+Dear %%NAME%%,
+
+Your support request "%%SUBJECT%%" has been updated to a status %%STATUS%%.
+
+Sincerely,
+
+%%SITE_TITLE%%
+%%SITE_URL%%

@@ -1,0 +1,24 @@
+Dear %%NAME%%,
+
+Your support request "%%SUBJECT%%" has been submitted.
+
+We reply to all requests as soon as possible, within 24 to 48 hours. If we expect your request will take additional time, we will update you by sending you an email.
+
+Request tracking ID: %%TRACK_ID%%
+
+You can view the status of your request here:
+%%TRACK_URL%%
+
+
+Note: This email address (request@rafihportal.com) is not monitored for incoming messages.
+
+If you require assistance or wish to contact us, please visit our website or use one of the designated contact channels provided.
+
+Your patience and understanding are appreciated.
+
+
+
+Sincerely,
+
+%%SITE_TITLE%%
+%%SITE_URL%%

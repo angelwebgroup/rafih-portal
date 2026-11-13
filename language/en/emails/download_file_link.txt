@@ -1,0 +1,8 @@
+Hi %%NAME%%,
+
+Download link for the attachment you tried to access is below. Please click on the link to download attachment
+%%ATTACHMENT_LINK%%
+
+Thanks,
+%%SITE_TITLE%%
+%%SITE_URL%%
