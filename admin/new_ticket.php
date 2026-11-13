@@ -200,7 +200,7 @@ $hesk_settings['categories'] = array();
 if (hesk_checkPermission('can_submit_any_cat', 0)) {
     $res = hesk_dbQuery("SELECT `id`, `name`, `priority` FROM `" . hesk_dbEscape($hesk_settings['db_pfix']) . "categories` ORDER BY `cat_order` ASC");
 } else {
-    $res = hesk_dbQuery("SELECT `id`, `name`, `priority` FROM `" . hesk_dbEscape($hesk_settings['db_pfix']) . "categories`  WHERE " . hesk_myCategories('id') . "  OR id IN (8, 9, 10) ORDER BY `cat_order` ASC");
+    $res = hesk_dbQuery("SELECT `id`, `name`, `priority` FROM `" . hesk_dbEscape($hesk_settings['db_pfix']) . "categories`  WHERE " . hesk_myCategories('id') . "  OR id IN (8, 9, 10, 11) ORDER BY `cat_order` ASC");
 }
 
 while ($row = hesk_dbFetchAssoc($res)) {
