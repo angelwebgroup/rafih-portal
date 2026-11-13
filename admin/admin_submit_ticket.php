@@ -1340,6 +1340,223 @@ if (in_array(intval($tmpvar['category']), array(9, 10))) {
 	$tmpvar['message'] = strip_tags(str_replace(array('</tr>', '<br>', '</div>'), "\n", $app_html));
 }
 
+// Vehicle Order Intake Form Processing
+if ($tmpvar['category'] == 11 || (isset($hesk_settings['categories'][$tmpvar['category']]['name']) && (stripos($hesk_settings['categories'][$tmpvar['category']]['name'], 'Vehicle Order') !== false || stripos($hesk_settings['categories'][$tmpvar['category']]['name'], 'Order Intake') !== false))) {
+	$voi_dealership = isset($_POST['voi_dealership']) ? hesk_input($_POST['voi_dealership']) : '';
+	$voi_order_month = isset($_POST['voi_order_month']) ? hesk_input($_POST['voi_order_month']) : '';
+	$voi_brand = isset($_POST['voi_brand']) ? hesk_input($_POST['voi_brand']) : '';
+	$voi_target_months = isset($_POST['voi_target_months']) ? floatval($_POST['voi_target_months']) : 2.0;
+	if ($voi_target_months <= 0) $voi_target_months = 2.0;
+	$voi_notes = isset($_POST['voi_notes']) ? hesk_input($_POST['voi_notes']) : '';
+
+	$tmpvar['subject'] = 'Vehicle Order Intake - ' . ($voi_dealership ? $voi_dealership : 'Dealership') . ' (' . ($voi_order_month ? $voi_order_month : date('M Y')) . ')';
+
+	// Parse line items JSON
+	$rows_data = array();
+	if (!empty($_POST['voi_data_json'])) {
+		$decoded = json_decode($_POST['voi_data_json'], true);
+		if (is_array($decoded)) {
+			$rows_data = $decoded;
+		}
+	}
+
+	// Fallback to POST arrays if JSON empty
+	if (empty($rows_data) && isset($_POST['voi_m']) && is_array($_POST['voi_m'])) {
+		for ($i = 0; $i < count($_POST['voi_m']); $i++) {
+			$m = trim(hesk_input($_POST['voi_m'][$i]));
+			if (empty($m)) continue;
+			$t = isset($_POST['voi_t'][$i]) ? trim(hesk_input($_POST['voi_t'][$i])) : '';
+			$c = isset($_POST['voi_c'][$i]) ? floatval($_POST['voi_c'][$i]) : 0;
+			$d = isset($_POST['voi_d'][$i]) ? floatval($_POST['voi_d'][$i]) : 0;
+			$e = isset($_POST['voi_e'][$i]) ? floatval($_POST['voi_e'][$i]) : 0;
+			$g = isset($_POST['voi_g'][$i]) ? floatval($_POST['voi_g'][$i]) : 0;
+			$j = isset($_POST['voi_j'][$i]) ? floatval($_POST['voi_j'][$i]) : 0;
+			$f = $d + $e;
+			$h = $f + $g;
+			$i_val = $c > 0 ? ($h / $c) : 0;
+			$k_val = $c > 0 ? ($i_val - $j) : 0;
+			$l_val = $c > 0 ? max(0, round($voi_target_months * $c - ($f - $c * $j))) : 0;
+			$q_val = (isset($_POST['voi_q'][$i]) && strlen(trim($_POST['voi_q'][$i])) > 0) ? floatval($_POST['voi_q'][$i]) : $l_val;
+			$m_val = $f + $q_val;
+			$n_val = $c > 0 ? (($m_val - $c * $j) / $c) : 0;
+			$cm = isset($_POST['voi_cm'][$i]) ? trim(hesk_input($_POST['voi_cm'][$i])) : '';
+			$flag = $n_val > ($voi_target_months + 0.05) ? 'Over' : ($n_val < 1.0 ? 'Short' : 'Normal');
+
+			$rows_data[] = array(
+				'model' => $m,
+				'trim' => $t,
+				'avg_sold' => $c,
+				'stock' => $d,
+				'on_order' => $e,
+				'total_supply_land' => $f,
+				'mfr_suggested' => $g,
+				'supply_incl_mfr' => $h,
+				'gross_months_mfr' => $c > 0 ? number_format($i_val, 1) : '–',
+				'months_until_arrive' => $j,
+				'net_months_mfr' => $c > 0 ? number_format($k_val, 1) : '–',
+				'rec_dealer_order' => $l_val,
+				'dealer_order_qty' => $q_val,
+				'total_supply_dealer' => $m_val,
+				'net_months_dealer' => $c > 0 ? number_format($n_val, 1) : '–',
+				'status_flag' => $flag,
+				'comment' => $cm
+			);
+		}
+	}
+
+	// Build rows HTML and calculate totals
+	$table_rows_html = '';
+	$tot_c = 0; $tot_d = 0; $tot_e = 0; $tot_f = 0;
+	$tot_g = 0; $tot_h = 0; $tot_l = 0; $tot_q = 0; $tot_m = 0;
+
+	foreach ($rows_data as $row) {
+		$m = htmlspecialchars($row['model']);
+		$t = htmlspecialchars($row['trim']);
+		$c = floatval($row['avg_sold']);
+		$d = floatval($row['stock']);
+		$e = floatval($row['on_order']);
+		$f = floatval($row['total_supply_land']);
+		$g = floatval($row['mfr_suggested']);
+		$h = floatval($row['supply_incl_mfr']);
+		$gross_mfr = htmlspecialchars($row['gross_months_mfr']);
+		$j = floatval($row['months_until_arrive']);
+		$net_mfr = htmlspecialchars($row['net_months_mfr']);
+		$rec_order = floatval($row['rec_dealer_order']);
+		$q = floatval($row['dealer_order_qty']);
+		$m_dealer = floatval($row['total_supply_dealer']);
+		$net_dealer = htmlspecialchars($row['net_months_dealer']);
+		$flag = isset($row['status_flag']) ? $row['status_flag'] : 'Normal';
+		$cm = htmlspecialchars($row['comment']);
+
+		$tot_c += $c; $tot_d += $d; $tot_e += $e; $tot_f += $f;
+		$tot_g += $g; $tot_h += $h; $tot_l += $rec_order; $tot_q += $q; $tot_m += $m_dealer;
+
+		$badge_html = '';
+		if ($flag == 'Over') {
+			$badge_html = ' <span style="display:inline-block;background:#fef3c7;color:#b4540a;border:1px solid #fde68a;font-size:10px;font-weight:bold;padding:1px 6px;border-radius:10px;">OVER</span>';
+		} elseif ($flag == 'Short') {
+			$badge_html = ' <span style="display:inline-block;background:#fee2e2;color:#dc2626;border:1px solid #fca5a5;font-size:10px;font-weight:bold;padding:1px 6px;border-radius:10px;">SHORT</span>';
+		}
+
+		$table_rows_html .= '<tr>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;font-weight:600;color:#0f172a;">' . $m . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;color:#475569;">' . ($t ? $t : '–') . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;">' . number_format($c, 1) . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;">' . $d . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;">' . $e . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;background:#fefce8;color:#854d0e;font-weight:600;">' . $f . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;">' . $g . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;background:#fefce8;color:#854d0e;font-weight:600;">' . $h . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;background:#fefce8;color:#854d0e;">' . $gross_mfr . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;">' . number_format($j, 1) . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;background:#fefce8;color:#854d0e;">' . $net_mfr . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;background:#fefce8;color:#854d0e;font-weight:600;">' . $rec_order . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;font-weight:700;color:#0c783c;background:#f0fdf4;">' . $q . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;background:#fefce8;color:#854d0e;font-weight:600;">' . $m_dealer . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;text-align:right;background:#fefce8;color:#854d0e;font-weight:600;">' . $net_dealer . $badge_html . '</td>
+			<td style="border:1px solid #cbd5e1;padding:7px 8px;color:#334155;font-size:11px;">' . ($cm ? $cm : '–') . '</td>
+		</tr>';
+	}
+
+	$overall_gross = $tot_c > 0 ? number_format($tot_h / $tot_c, 1) : '–';
+
+	$voi_html = '
+	<div id="vehicle-order-intake-content" style="font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;background:#ffffff;padding:24px;border:1px solid #e2e8f0;border-radius:8px;max-width:100%;margin:0 auto;color:#1e293b;">
+		<div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #0c783c;padding-bottom:14px;margin-bottom:18px;flex-wrap:wrap;gap:12px;">
+			<div>
+				<img src="' . $hesk_settings['hesk_url'] . '/img/rafih-logo.jpg" alt="Rafih Auto Group" style="max-height:48px;">
+			</div>
+			<div style="text-align:right;">
+				<h2 style="margin:0;font-size:1.5rem;color:#1a202c;font-family:Georgia,serif;">New Vehicle Order Intake</h2>
+				<span style="display:inline-block;background:#0c783c;color:#ffffff;font-size:0.75rem;font-weight:bold;padding:3px 12px;border-radius:12px;margin-top:4px;">Allocation & Supply Planning</span>
+			</div>
+		</div>
+
+		<table style="width:100%;border-collapse:collapse;margin-bottom:20px;background:#f8faf9;border:1.5px solid #cbd5e1;border-radius:6px;">
+			<tr>
+				<td style="padding:10px 14px;border-right:1px solid #e2e8f0;width:25%;">
+					<div style="font-size:0.72rem;font-weight:bold;color:#64748b;text-transform:uppercase;">Dealership</div>
+					<div style="font-size:0.95rem;font-weight:700;color:#0c783c;">' . ($voi_dealership ? htmlspecialchars($voi_dealership) : 'N/A') . '</div>
+				</td>
+				<td style="padding:10px 14px;border-right:1px solid #e2e8f0;width:25%;">
+					<div style="font-size:0.72rem;font-weight:bold;color:#64748b;text-transform:uppercase;">Allocation Month</div>
+					<div style="font-size:0.95rem;font-weight:600;color:#1e293b;">' . ($voi_order_month ? htmlspecialchars($voi_order_month) : date('F Y')) . '</div>
+				</td>
+				<td style="padding:10px 14px;border-right:1px solid #e2e8f0;width:25%;">
+					<div style="font-size:0.72rem;font-weight:bold;color:#64748b;text-transform:uppercase;">Brand / Manufacturer</div>
+					<div style="font-size:0.95rem;font-weight:600;color:#1e293b;">' . ($voi_brand ? htmlspecialchars($voi_brand) : '–') . '</div>
+				</td>
+				<td style="padding:10px 14px;width:25%;">
+					<div style="font-size:0.72rem;font-weight:bold;color:#64748b;text-transform:uppercase;">Target Supply</div>
+					<div style="font-size:0.95rem;font-weight:600;color:#1e293b;">' . number_format($voi_target_months, 1) . ' Months</div>
+				</td>
+			</tr>
+		</table>
+
+		<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #cbd5e1;border-radius:6px;margin-bottom:18px;">
+			<table style="width:100%;min-width:1450px;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums;">
+				<thead>
+					<tr style="background:#f1f5f9;color:#334155;text-transform:uppercase;font-size:10.5px;letter-spacing:0.03em;">
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:left;">Vehicle Model</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:left;">Trim</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;">Avg Sold</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;">In Stock</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;">On Order</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;background:#fefce8;color:#854d0e;">Total Supply</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;">Mfr Sugg</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;background:#fefce8;color:#854d0e;">Supply w/ Mfr</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;background:#fefce8;color:#854d0e;">Gross Mos</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;">Mos Arrive</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;background:#fefce8;color:#854d0e;">Net Mos (Mfr)</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;background:#fefce8;color:#854d0e;">Rec Dealer</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;font-weight:bold;color:#0c783c;background:#f0fdf4;">Dealer Qty</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;background:#fefce8;color:#854d0e;">Supply (Dealer)</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:right;background:#fefce8;color:#854d0e;">Net Mos (Dealer)</th>
+						<th style="padding:9px 8px;border-bottom:2px solid #cbd5e1;text-align:left;width:220px;">Justification / Notes</th>
+					</tr>
+				</thead>
+				<tbody>
+					' . $table_rows_html . '
+				</tbody>
+				<tfoot>
+					<tr style="background:#f8fafc;font-weight:bold;border-top:2px solid #cbd5e1;">
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;">TOTAL</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;"></td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;">' . number_format($tot_c, 1) . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;">' . $tot_d . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;">' . $tot_e . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;background:#fef9c3;color:#854d0e;">' . $tot_f . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;">' . $tot_g . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;background:#fef9c3;color:#854d0e;">' . $tot_h . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;background:#fef9c3;color:#854d0e;">' . $overall_gross . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;"></td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;"></td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;background:#fef9c3;color:#854d0e;">' . $tot_l . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;color:#0c783c;background:#dcfce7;font-weight:700;">' . $tot_q . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;background:#fef9c3;color:#854d0e;">' . $tot_m . '</td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;text-align:right;"></td>
+						<td style="padding:9px 8px;border:1px solid #cbd5e1;"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>';
+
+	if ($voi_notes) {
+		$voi_html .= '
+		<div style="margin-top:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:12px 16px;">
+			<strong style="color:#0c783c;font-size:0.85rem;text-transform:uppercase;">General Notes / Instructions:</strong>
+			<div style="margin-top:6px;color:#334155;font-size:0.9rem;white-space:pre-wrap;">' . nl2br(htmlspecialchars($voi_notes)) . '</div>
+		</div>';
+	}
+
+	$voi_html .= '
+	</div>';
+
+	$tmpvar['message_html'] = $voi_html;
+	$tmpvar['message'] = strip_tags(str_replace(array('</tr>', '<br>', '</div>'), "\n", $voi_html));
+}
+
+
 //print_r($tmpvar);
 // Insert ticket to database
 $ticket = hesk_newTicket($tmpvar);

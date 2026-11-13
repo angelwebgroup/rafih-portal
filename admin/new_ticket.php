@@ -225,6 +225,7 @@ if ($number_of_categories == 0) {
 $is_credit_app_usa = ($category == 9 || (isset($hesk_settings['categories'][$category]['name']) && $hesk_settings['categories'][$category]['name'] == 'Credit Application-USA'));
 $is_credit_app_canada = ($category == 10 || (isset($hesk_settings['categories'][$category]['name']) && $hesk_settings['categories'][$category]['name'] == 'Credit Application-CANADA'));
 $is_credit_app = ($is_credit_app_usa || $is_credit_app_canada);
+$is_vehicle_order = ($category == 11 || (isset($hesk_settings['categories'][$category]['name']) && (stripos($hesk_settings['categories'][$category]['name'], 'Vehicle Order') !== false || stripos($hesk_settings['categories'][$category]['name'], 'Order Intake') !== false)));
 
 // List of users whom this ticket can be assigned to
 $admins = array();
@@ -1128,9 +1129,723 @@ function hesk_getCatDescription($id)
             })();
             </script>
             <?php } ?>
+
+            <?php if ($is_vehicle_order) { 
+                $voi_canada_dealerships = array(
+                    'Countryside Chrysler',
+                    'Eastway Toyota/Lexus',
+                    'Jaguar Land Rover of London',
+                    'Leamington GM',
+                    'Midtown Honda',
+                    'Jaguar Land Rover of Windsor',
+                    'Oakridge Ford',
+                    'Performance Ford',
+                    'Overseas Mercedes-Benz',
+                    'Windsor Mazda',
+                    'Whiteoak Ford',
+                    'Overseas BMW'
+                );
+                $voi_usa_dealerships = array(
+                    'Audi of Rochester Hills',
+                    'BMW of Rochester Hills',
+                    'Mercedes-Benz of North Olmsted',
+                    'Motor City Mini',
+                    'Porsche Detroit North',
+                    'Porsche of North Olmsted',
+                    'Toyota of Warren'
+                );
+            ?>
+            <style>
+            .voi-panel {
+                background: #ffffff;
+                border: 1px solid #dcdfe4;
+                border-radius: 10px;
+                padding: 24px;
+                margin: 20px 0 30px 0;
+                box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+            }
+            .voi-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 2px solid #0c783c;
+                padding-bottom: 15px;
+                margin-bottom: 22px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            .voi-header .logo-area img {
+                max-height: 52px;
+                width: auto;
+            }
+            .voi-header .title-area {
+                text-align: right;
+            }
+            .voi-header h2 {
+                font-size: 1.7rem;
+                font-weight: 700;
+                margin: 0;
+                color: #1a202c;
+                font-family: Georgia, serif;
+            }
+            .voi-header .voi-badge-top {
+                display: inline-block;
+                background: #0c783c;
+                color: #ffffff;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 4px 14px;
+                border-radius: 20px;
+                margin-top: 5px;
+                letter-spacing: 0.5px;
+            }
+            .voi-meta-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 16px;
+                background: #f8faf9;
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                padding: 18px;
+                margin-bottom: 24px;
+            }
+            .voi-meta-item label {
+                display: block;
+                font-size: 0.78rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                color: #475569;
+                margin-bottom: 6px;
+            }
+            .voi-meta-item label .req {
+                color: #dc2626;
+            }
+            .voi-meta-item input, .voi-meta-item select {
+                width: 100%;
+                border: 1px solid #cbd5e1;
+                border-radius: 6px;
+                padding: 8px 10px;
+                font-size: 0.92rem;
+                color: #1e293b;
+                background: #fff;
+                transition: border-color 0.15s ease-in-out;
+            }
+            .voi-meta-item input:focus, .voi-meta-item select:focus {
+                border-color: #0c783c;
+                outline: 2px solid rgba(12,120,60,0.2);
+            }
+            .voi-legend {
+                display: flex;
+                gap: 16px;
+                flex-wrap: wrap;
+                align-items: center;
+                font-size: 0.82rem;
+                color: #475569;
+                background: #f1f5f9;
+                padding: 10px 14px;
+                border-radius: 6px;
+                margin-bottom: 12px;
+            }
+            .voi-legend span {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+            }
+            .voi-sw {
+                width: 14px;
+                height: 14px;
+                border-radius: 3px;
+                border: 1px solid #cbd5e1;
+                display: inline-block;
+            }
+            .voi-scroll-hint {
+                font-size: 0.8rem;
+                color: #0c783c;
+                margin-bottom: 8px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+            .voi-tbl-wrap {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                border: 1px solid #cbd5e1;
+                border-radius: 8px;
+                margin-bottom: 16px;
+                background: #ffffff;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            }
+            .voi-tbl-wrap::-webkit-scrollbar {
+                height: 8px;
+            }
+            .voi-tbl-wrap::-webkit-scrollbar-thumb {
+                background: #94a3b8;
+                border-radius: 4px;
+            }
+            .voi-table {
+                border-collapse: collapse;
+                width: 100%;
+                min-width: 1560px;
+                font-variant-numeric: tabular-nums;
+            }
+            .voi-table th {
+                font-size: 0.72rem;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                color: #334155;
+                text-align: left;
+                vertical-align: bottom;
+                padding: 10px 8px;
+                border-bottom: 2px solid #cbd5e1;
+                background: #f8fafc;
+                font-weight: 700;
+                line-height: 1.3;
+            }
+            .voi-table th.c, .voi-table td.c {
+                background: #fefce8;
+            }
+            .voi-table th.c {
+                color: #854d0e;
+                text-align: right;
+            }
+            .voi-table td {
+                padding: 6px 6px;
+                border-bottom: 1px solid #e2e8f0;
+                vertical-align: middle;
+            }
+            .voi-table td.i {
+                background: #f0fdf4;
+            }
+            .voi-table td.c {
+                font-family: ui-monospace, Menlo, Consolas, monospace;
+                font-size: 0.88rem;
+                text-align: right;
+                font-weight: 600;
+                color: #1e293b;
+                padding-right: 10px;
+            }
+            .voi-table td input {
+                font-family: inherit;
+                font-size: 0.88rem;
+                padding: 6px 8px;
+                border: 1px solid #cbd5e1;
+                border-radius: 4px;
+                background: #ffffff;
+                width: 100%;
+            }
+            .voi-table td input[type="number"] {
+                text-align: right;
+                font-family: ui-monospace, Menlo, Consolas, monospace;
+            }
+            .voi-table td input:focus {
+                border-color: #0c783c;
+                outline: 2px solid rgba(12,120,60,0.25);
+            }
+            .voi-table td textarea {
+                min-height: 32px;
+                resize: vertical;
+                padding: 5px 7px;
+                font-size: 0.82rem;
+                border: 1px solid #cbd5e1;
+                border-radius: 4px;
+                width: 100%;
+            }
+            .voi-table td.sticky-col, .voi-table th.sticky-col {
+                position: sticky;
+                left: 0;
+                z-index: 2;
+                background: #ffffff;
+                box-shadow: 2px 0 4px rgba(0,0,0,0.04);
+            }
+            .voi-table th.sticky-col {
+                background: #f8fafc;
+            }
+            .voi-table tfoot td {
+                font-weight: 700;
+                background: #f8fafc;
+                border-top: 2px solid #cbd5e1;
+                padding: 10px 8px;
+            }
+            .voi-table tfoot td.c {
+                background: #fef9c3;
+                color: #854d0e;
+            }
+            .voi-flag {
+                display: inline-block;
+                font-size: 0.68rem;
+                font-weight: 700;
+                padding: 1px 6px;
+                border-radius: 10px;
+                margin-left: 4px;
+                vertical-align: middle;
+                text-transform: uppercase;
+            }
+            .voi-flag.hi {
+                background: #fef3c7;
+                color: #b4540a;
+                border: 1px solid #fde68a;
+            }
+            .voi-flag.lo {
+                background: #fee2e2;
+                color: #dc2626;
+                border: 1px solid #fca5a5;
+            }
+            .voi-rm {
+                background: none;
+                border: 1px solid #cbd5e1;
+                color: #64748b;
+                border-radius: 5px;
+                width: 28px;
+                height: 28px;
+                cursor: pointer;
+                font-size: 1.1rem;
+                line-height: 1;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.15s ease;
+            }
+            .voi-rm:hover {
+                color: #dc2626;
+                border-color: #dc2626;
+                background: #fee2e2;
+            }
+            .voi-btn-row {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-top: 14px;
+            }
+            .voi-btn {
+                font-family: inherit;
+                font-weight: 600;
+                font-size: 0.88rem;
+                border-radius: 6px;
+                padding: 8px 16px;
+                cursor: pointer;
+                border: 1px solid #0c783c;
+                background: transparent;
+                color: #0c783c;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                transition: all 0.15s ease;
+            }
+            .voi-btn:hover {
+                background: #0c783c;
+                color: #ffffff;
+            }
+            .voi-btn.voi-btn-clear {
+                border-color: #94a3b8;
+                color: #64748b;
+            }
+            .voi-btn.voi-btn-clear:hover {
+                border-color: #dc2626;
+                background: #fee2e2;
+                color: #dc2626;
+            }
+            .voi-note {
+                font-size: 0.82rem;
+                color: #64748b;
+                margin-left: auto;
+            }
+            @media (max-width: 768px) {
+                .voi-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .voi-header .title-area {
+                    text-align: left;
+                }
+                .voi-note {
+                    margin-left: 0;
+                    width: 100%;
+                }
+            }
+            </style>
+
+            <div class="voi-panel" id="voi-form-panel">
+                <div class="voi-header">
+                    <div class="logo-area">
+                        <img src="<?php echo HESK_PATH; ?>img/rafih-logo.jpg" alt="Rafih Auto Group">
+                    </div>
+                    <div class="title-area">
+                        <h2>New Vehicle Order Intake</h2>
+                        <span class="voi-badge-top">Allocation & Supply Planning</span>
+                    </div>
+                </div>
+
+                <!-- Order Meta Fields -->
+                <div class="voi-meta-grid">
+                    <div class="voi-meta-item">
+                        <label for="voi_dealership">Dealership <span class="req">*</span></label>
+                        <select name="voi_dealership" id="voi_dealership" required>
+                            <option value="">-- Select Dealership --</option>
+                            <optgroup label="Canada Dealerships">
+                                <?php foreach ($voi_canada_dealerships as $ds): ?>
+                                    <option value="<?php echo htmlspecialchars($ds); ?>"><?php echo htmlspecialchars($ds); ?></option>
+                                <?php endforeach; ?>
+                            </optgroup>
+                            <optgroup label="USA Dealerships">
+                                <?php foreach ($voi_usa_dealerships as $ds): ?>
+                                    <option value="<?php echo htmlspecialchars($ds); ?>"><?php echo htmlspecialchars($ds); ?></option>
+                                <?php endforeach; ?>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="voi-meta-item">
+                        <label for="voi_order_month">Allocation / Order Month <span class="req">*</span></label>
+                        <input type="text" name="voi_order_month" id="voi_order_month" placeholder="e.g. December 2026 Allocation" required value="<?php echo date('F Y') . ' Allocation'; ?>">
+                    </div>
+
+                    <div class="voi-meta-item">
+                        <label for="voi_brand">Manufacturer / Brand</label>
+                        <input type="text" name="voi_brand" id="voi_brand" placeholder="e.g. Ford, Toyota, Honda, BMW">
+                    </div>
+
+                    <div class="voi-meta-item">
+                        <label for="voi_target_months">Target Months Supply (T)</label>
+                        <input type="number" step="0.1" min="0.5" max="12" name="voi_target_months" id="voi_target_months" value="2.0">
+                    </div>
+                </div>
+
+                <!-- Legend -->
+                <div class="voi-legend">
+                    <span><i class="voi-sw" style="background:#f0fdf4"></i> You enter</span>
+                    <span><i class="voi-sw" style="background:#fefce8"></i> Calculated</span>
+                    <span><span class="voi-flag hi">Over</span> Over target (needs comment)</span>
+                    <span><span class="voi-flag lo">Short</span> Lands under 1 month supply</span>
+                </div>
+
+                <div class="voi-scroll-hint">
+                    <svg style="width:14px;height:14px;fill:currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                    <span>Horizontal scroll enabled — scroll sideways on smaller screens to view all 16 columns</span>
+                </div>
+
+                <!-- Main Intake Table -->
+                <div class="voi-tbl-wrap">
+                    <table class="voi-table" id="voi_table">
+                        <thead>
+                            <tr>
+                                <th class="sticky-col" style="width:190px">Vehicle Model <span style="color:#dc2626">*</span></th>
+                                <th style="width:130px">Trim / Code</th>
+                                <th style="width:110px">Avg Sold / Mo<br><small style="color:#64748b">(last 6 mo)</small></th>
+                                <th style="width:90px">Units in Stock</th>
+                                <th style="width:90px">Units on Order</th>
+                                <th class="c" style="width:100px">Total Supply<br><small style="color:#854d0e">(after orders)</small></th>
+                                <th style="width:100px">Mfr Suggested Order</th>
+                                <th class="c" style="width:100px">Supply incl. Mfr</th>
+                                <th class="c" style="width:90px">Gross Mos Supply (Mfr)</th>
+                                <th style="width:95px">Months Until Arrives</th>
+                                <th class="c" style="width:95px">Net Mos at Arrival (Mfr)</th>
+                                <th class="c" style="width:105px">Recommended Dealer Order</th>
+                                <th style="width:105px">Dealer Order Qty</th>
+                                <th class="c" style="width:105px">Total Supply (Dealer Order)</th>
+                                <th class="c" style="width:110px">Net Mos at Arrival (Dealer)</th>
+                                <th style="width:230px">Comments / Justification</th>
+                                <th style="width:40px"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="voi_rows"></tbody>
+                        <tfoot>
+                            <tr id="voi_tot"></tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="voi-btn-row">
+                    <button type="button" class="voi-btn" id="voi_add_line">+ Add Line</button>
+                    <button type="button" class="voi-btn" id="voi_add_5">+ Add 5 Lines</button>
+                    <button type="button" class="voi-btn voi-btn-clear" id="voi_clear_lines">Clear All Lines</button>
+                    <span class="voi-note">Tip: Tab between input boxes for fast data entry. Calculations update in real time.</span>
+                </div>
+
+                <!-- General Notes -->
+                <div style="margin-top:22px;">
+                    <label for="voi_notes" style="display:block;font-size:0.78rem;font-weight:700;text-transform:uppercase;color:#475569;margin-bottom:6px;">General Order Notes / Director Instructions</label>
+                    <textarea name="voi_notes" id="voi_notes" rows="3" class="form-control" placeholder="Optional general notes regarding allocation, delivery schedule, or manufacturer incentives..."></textarea>
+                </div>
+
+                <!-- Hidden JSON data storage -->
+                <input type="hidden" name="voi_data_json" id="voi_data_json" value="">
+            </div>
+
+            <script>
+            (function() {
+                var sampleData = [
+                    ["Vehicle Model 1", "", 2, 2, 4, 3, 1],
+                    ["Vehicle Model 2", "", 5, 12, 5, 1, 2],
+                    ["Vehicle Model 3", "", 5, 9, 13, 15, 3]
+                ];
+                var tb = document.getElementById('voi_rows');
+                var tot = document.getElementById('voi_tot');
+                var targetInput = document.getElementById('voi_target_months');
+                var rowCount = 0;
+
+                function num(v) {
+                    var x = parseFloat(v);
+                    return isNaN(x) ? 0 : x;
+                }
+                function f1(x) {
+                    return isFinite(x) ? x.toFixed(1) : '–';
+                }
+
+                function addVoiRow(d) {
+                    d = d || [];
+                    rowCount++;
+                    var id = 'voi_r' + rowCount;
+                    var tr = document.createElement('tr');
+                    tr.dataset.id = id;
+                    tr.innerHTML = 
+                        '<td class="i sticky-col"><input class="voi-m" name="voi_m[]" value="' + (d[0] || '') + '" placeholder="e.g. Model Name"></td>' +
+                        '<td class="i"><input class="voi-t" name="voi_t[]" value="' + (d[1] || '') + '" placeholder="Optional Trim"></td>' +
+                        '<td class="i"><input class="voi-c" name="voi_c[]" type="number" min="0" step="0.1" value="' + (d[2] !== undefined ? d[2] : '') + '"></td>' +
+                        '<td class="i"><input class="voi-d" name="voi_d[]" type="number" min="0" value="' + (d[3] !== undefined ? d[3] : '') + '"></td>' +
+                        '<td class="i"><input class="voi-e" name="voi_e[]" type="number" min="0" value="' + (d[4] !== undefined ? d[4] : '') + '"></td>' +
+                        '<td class="c voi-f">0</td>' +
+                        '<td class="i"><input class="voi-g" name="voi_g[]" type="number" min="0" value="' + (d[5] !== undefined ? d[5] : '') + '"></td>' +
+                        '<td class="c voi-h">0</td>' +
+                        '<td class="c voi-i">–</td>' +
+                        '<td class="i"><input class="voi-j" name="voi_j[]" type="number" min="0" step="0.5" value="' + (d[6] !== undefined ? d[6] : '') + '"></td>' +
+                        '<td class="c voi-k">–</td>' +
+                        '<td class="c voi-l">0</td>' +
+                        '<td class="i"><input class="voi-q" name="voi_q[]" type="number" min="0" placeholder="= rec."></td>' +
+                        '<td class="c voi-m-calc">0</td>' +
+                        '<td class="c voi-n">–</td>' +
+                        '<td class="i"><textarea class="voi-cm" name="voi_cm[]" rows="1" placeholder="Required if over target"></textarea></td>' +
+                        '<td><button type="button" class="voi-rm" title="Remove line" aria-label="Remove line">×</button></td>';
+                    tb.appendChild(tr);
+                    calcVoi();
+                }
+
+                function getRowValues(tr) {
+                    function g(cls) {
+                        var el = tr.querySelector('.' + cls);
+                        return el ? num(el.value) : 0;
+                    }
+                    var C = g('voi-c');
+                    var D = g('voi-d');
+                    var E = g('voi-e');
+                    var G = g('voi-g');
+                    var J = g('voi-j');
+                    var T = targetInput ? num(targetInput.value) : 2.0;
+                    if (T <= 0) T = 2.0;
+
+                    var F = D + E;
+                    var H = F + G;
+                    var I = C > 0 ? (H / C) : NaN;
+                    var K = C > 0 ? (I - J) : NaN;
+                    var L = C > 0 ? Math.max(0, Math.round(T * C - (F - C * J))) : 0;
+
+                    var qEl = tr.querySelector('.voi-q');
+                    var qVal = qEl ? qEl.value : '';
+                    var Q = qVal === '' ? L : num(qVal);
+
+                    var M = F + Q;
+                    var N = C > 0 ? (M - C * J) / C : NaN;
+
+                    return { C: C, D: D, E: E, F: F, G: G, H: H, I: I, J: J, K: K, L: L, Q: Q, M: M, N: N, T: T, qVal: qVal };
+                }
+
+                function calcVoi() {
+                    var S = { C: 0, D: 0, E: 0, F: 0, G: 0, H: 0, L: 0, Q: 0, M: 0 };
+                    var rows = tb.querySelectorAll('tr');
+
+                    rows.forEach(function(tr) {
+                        var v = getRowValues(tr);
+                        var fEl = tr.querySelector('.voi-f');
+                        var hEl = tr.querySelector('.voi-h');
+                        var iEl = tr.querySelector('.voi-i');
+                        var kEl = tr.querySelector('.voi-k');
+                        var lEl = tr.querySelector('.voi-l');
+                        var qEl = tr.querySelector('.voi-q');
+                        var mCalcEl = tr.querySelector('.voi-m-calc');
+                        var nEl = tr.querySelector('.voi-n');
+
+                        if (fEl) fEl.textContent = v.F;
+                        if (hEl) hEl.textContent = v.H;
+                        if (iEl) iEl.textContent = f1(v.I);
+                        if (kEl) kEl.textContent = f1(v.K);
+                        if (lEl) lEl.textContent = v.L;
+                        if (mCalcEl) mCalcEl.textContent = v.M;
+
+                        var flag = '';
+                        if (isFinite(v.N)) {
+                            if (v.N > v.T + 0.05) {
+                                flag = '<span class="voi-flag hi">Over</span>';
+                            } else if (v.N < 1.0) {
+                                flag = '<span class="voi-flag lo">Short</span>';
+                            }
+                        }
+                        if (nEl) nEl.innerHTML = f1(v.N) + flag;
+                        if (qEl) qEl.placeholder = '= ' + v.L;
+
+                        S.C += v.C;
+                        S.D += v.D;
+                        S.E += v.E;
+                        S.F += v.F;
+                        S.G += v.G;
+                        S.H += v.H;
+                        S.L += v.L;
+                        S.Q += v.Q;
+                        S.M += v.M;
+                    });
+
+                    var overallGross = S.C > 0 ? f1(S.H / S.C) : '–';
+                    tot.innerHTML = 
+                        '<td class="sticky-col">TOTAL</td>' +
+                        '<td></td>' +
+                        '<td class="c">' + S.C.toFixed(1) + '</td>' +
+                        '<td class="c">' + S.D + '</td>' +
+                        '<td class="c">' + S.E + '</td>' +
+                        '<td class="c">' + S.F + '</td>' +
+                        '<td class="c">' + S.G + '</td>' +
+                        '<td class="c">' + S.H + '</td>' +
+                        '<td class="c">' + overallGross + '</td>' +
+                        '<td></td>' +
+                        '<td></td>' +
+                        '<td class="c">' + S.L + '</td>' +
+                        '<td class="c">' + S.Q + '</td>' +
+                        '<td class="c">' + S.M + '</td>' +
+                        '<td></td>' +
+                        '<td></td>' +
+                        '<td></td>';
+                }
+
+                tb.addEventListener('input', calcVoi);
+                if (targetInput) targetInput.addEventListener('input', calcVoi);
+
+                tb.addEventListener('click', function(e) {
+                    var btn = e.target.closest('.voi-rm');
+                    if (btn) {
+                        var tr = btn.closest('tr');
+                        if (tr) {
+                            tr.remove();
+                            calcVoi();
+                        }
+                    }
+                });
+
+                document.getElementById('voi_add_line').onclick = function() {
+                    addVoiRow();
+                    var last = tb.lastElementChild;
+                    if (last) {
+                        var input = last.querySelector('.voi-m');
+                        if (input) input.focus();
+                    }
+                };
+
+                document.getElementById('voi_add_5').onclick = function() {
+                    for (var i = 0; i < 5; i++) addVoiRow();
+                };
+
+                var clearArmed = false;
+                var clrBtn = document.getElementById('voi_clear_lines');
+                clrBtn.onclick = function() {
+                    if (!clearArmed) {
+                        clearArmed = true;
+                        clrBtn.textContent = 'Click again to clear';
+                        clrBtn.style.background = '#fee2e2';
+                        clrBtn.style.color = '#dc2626';
+                        setTimeout(function() {
+                            clearArmed = false;
+                            clrBtn.textContent = 'Clear All Lines';
+                            clrBtn.style.background = '';
+                            clrBtn.style.color = '';
+                        }, 3000);
+                        return;
+                    }
+                    tb.innerHTML = '';
+                    addVoiRow();
+                    clearArmed = false;
+                    clrBtn.textContent = 'Clear All Lines';
+                    clrBtn.style.background = '';
+                    clrBtn.style.color = '';
+                };
+
+                // Initialize with sample rows
+                sampleData.forEach(function(row) {
+                    addVoiRow(row);
+                });
+
+                // Pre-submit validation and data packaging
+                var form = document.getElementById('submit-ticket');
+                if (form) {
+                    form.addEventListener('submit', function(e) {
+                        if (!document.getElementById('voi-form-panel')) return true;
+
+                        var dealership = document.getElementById('voi_dealership');
+                        if (!dealership || !dealership.value) {
+                            e.preventDefault();
+                            alert('Please select a Dealership for the Vehicle Order Intake.');
+                            if (dealership) dealership.focus();
+                            return false;
+                        }
+
+                        var rows = tb.querySelectorAll('tr');
+                        var validRows = [];
+                        var hasMissingJustification = false;
+
+                        rows.forEach(function(tr) {
+                            var model = (tr.querySelector('.voi-m') ? tr.querySelector('.voi-m').value : '').trim();
+                            if (!model) return;
+
+                            var trim = (tr.querySelector('.voi-t') ? tr.querySelector('.voi-t').value : '').trim();
+                            var v = getRowValues(tr);
+                            var comment = (tr.querySelector('.voi-cm') ? tr.querySelector('.voi-cm').value : '').trim();
+
+                            if (v.N > v.T + 0.05 && !comment) {
+                                hasMissingJustification = true;
+                            }
+
+                            validRows.push({
+                                model: model,
+                                trim: trim,
+                                avg_sold: v.C,
+                                stock: v.D,
+                                on_order: v.E,
+                                total_supply_land: v.F,
+                                mfr_suggested: v.G,
+                                supply_incl_mfr: v.H,
+                                gross_months_mfr: isFinite(v.I) ? v.I.toFixed(1) : '–',
+                                months_until_arrive: v.J,
+                                net_months_mfr: isFinite(v.K) ? v.K.toFixed(1) : '–',
+                                rec_dealer_order: v.L,
+                                dealer_order_qty: v.Q,
+                                total_supply_dealer: v.M,
+                                net_months_dealer: isFinite(v.N) ? v.N.toFixed(1) : '–',
+                                status_flag: v.N > v.T + 0.05 ? 'Over' : (v.N < 1.0 ? 'Short' : 'Normal'),
+                                comment: comment
+                            });
+                        });
+
+                        if (validRows.length === 0) {
+                            e.preventDefault();
+                            alert('Please add at least one vehicle model to order.');
+                            return false;
+                        }
+
+                        if (hasMissingJustification) {
+                            if (!confirm('One or more vehicle models are Over Target supply without comments. Do you still wish to submit?')) {
+                                e.preventDefault();
+                                return false;
+                            }
+                        }
+
+                        // Store JSON string in hidden input
+                        document.getElementById('voi_data_json').value = JSON.stringify(validRows);
+                    });
+                }
+            })();
+            </script>
+            <?php } ?>
 			
             <?php
-            if (!$is_credit_app) {
+            if (!$is_credit_app && !$is_vehicle_order) {
                 //echo "<pre>";print_r($hesk_settings['custom_fields']);
                 foreach ($hesk_settings['custom_fields'] as $k => $v) {
                 if ($v['name'] == "Predictive index completed") {
@@ -2402,9 +3117,9 @@ document.addEventListener('paste', function(e) {
                                                                                                                                                                                                             echo stripslashes(hesk_input($_SESSION['as_subject']));
                                                                                                                                                                                                         } ?>"></span>
             </div>-->
-        <?php if ($is_credit_app) { ?>
+        <?php if ($is_credit_app || $is_vehicle_order) { ?>
             <div class="form-group" style="display:none;">
-                <textarea name="message" id="message">Credit Application</textarea>
+                <textarea name="message" id="message"><?php echo $is_vehicle_order ? 'Vehicle Order Intake' : 'Credit Application'; ?></textarea>
             </div>
         <?php } else { ?>
         <div class="form-group">
@@ -2431,10 +3146,10 @@ document.addEventListener('paste', function(e) {
         if ($hesk_settings['staff_ticket_formatting'] == 2) {
             hesk_tinymce_init('#message');
         }
-        } // end of else from if ($is_credit_app)
+        } // end of else from if ($is_credit_app || $is_vehicle_order)
 
         /* custom fields AFTER comments */
-        if (!$is_credit_app) {
+        if (!$is_credit_app && !$is_vehicle_order) {
         foreach ($hesk_settings['custom_fields'] as $k => $v) {
             if ($v['use'] && $v['place'] == 1 && hesk_is_custom_field_in_category($k, $category)) {
                 $v['req'] = $v['req'] == 2 ? '<span class="important">*</span>' : '';

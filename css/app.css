@@ -2575,7 +2575,7 @@ button {
 
 .btn-full.inline-flex {
     display: inline-flex;
-    height: 48px
+    height: 48px;
 }
 
 .btn-full:hover {
@@ -2587,15 +2587,15 @@ button {
 .btn-full:disabled {
     border-color: #f0f2f5;
     background-color: #f0f2f5;
-    color: #959eb0
+    color: #959eb0;
 }
 
 .btn--blue {
-    color: #0c783c
+    color: #0c783c;
 }
 
 .btn--blue .icon {
-    fill: currentColor
+    fill: currentColor;
 }
 
 .btn-border {
