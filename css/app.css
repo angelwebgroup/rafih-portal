@@ -2565,7 +2565,8 @@ button {
 .btn-full {
     min-width: 152px;
     height: 40px;
-    background-color: #0c783c;
+    /* background-color: #0c783c; */
+    background-color: maroon;
     color: #fff;
     font-weight: 600;
     transition: all 100ms ease;
